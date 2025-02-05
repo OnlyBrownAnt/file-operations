@@ -1,5 +1,5 @@
 {
-  "name": "file-operations",
+  "name": "fs-operations",
   "version": "1.0.0",
   "description": "A package for batch file and directory operations",
   "main": "index.js",
