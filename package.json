@@ -1,11 +1,11 @@
 {
   "name": "fs-operations",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A package for batch file and directory operations",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OnlyBrownAnt/file-operations.git"
+    "url": "https://github.com/OnlyBrownAnt/fs-operations.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
