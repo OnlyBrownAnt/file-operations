@@ -1,6 +1,6 @@
 {
   "name": "fs-operations",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "A package for batch file and directory operations",
   "main": "index.js",
   "repository": {
@@ -10,10 +10,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["file", "operations", "rename", "delete", "move", "copy"],
+  "keywords": [
+    "file",
+    "operations",
+    "rename",
+    "delete",
+    "move",
+    "copy"
+  ],
   "author": "brownant",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2"
-  }
+  },
+  "devDependencies": {}
 }

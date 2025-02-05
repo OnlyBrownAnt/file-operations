@@ -13,7 +13,7 @@ A Node.js package for batch processing of files and directories, supporting rena
 ## Installation
 
 ```bash
-npm install file-operations
+npm install fs-operations --save-dev
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install file-operations
 ### Rename Files and Directories
 
 ```javascript
-const { renameFiles } = require("file-operations");
+const { renameFiles } = require("fs-operations");
 
 (async () => {
   await renameFiles("./test", /old/, "new"); // Replace "old" with "new" in filenames and directory names
@@ -31,7 +31,7 @@ const { renameFiles } = require("file-operations");
 ### Delete Files and Directories
 
 ```javascript
-const { deleteFiles } = require("file-operations");
+const { deleteFiles } = require("fs-operations");
 
 (async () => {
   await deleteFiles("./test", /delete/); // Delete files and directories with names containing "delete"
@@ -41,7 +41,7 @@ const { deleteFiles } = require("file-operations");
 ### Move Files and Directories
 
 ```javascript
-const { moveFiles } = require("file-operations");
+const { moveFiles } = require("fs-operations");
 
 (async () => {
   await moveFiles("./test/source", "./test/destination"); // Move a directory
@@ -51,7 +51,7 @@ const { moveFiles } = require("file-operations");
 ### Copy Files and Directories
 
 ```javascript
-const { copyFiles } = require("file-operations");
+const { copyFiles } = require("fs-operations");
 
 (async () => {
   await copyFiles("./test/source", "./test/copy"); // Copy a directory
