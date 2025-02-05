@@ -1,4 +1,4 @@
-# File Operations
+# File System Operations
 
 A Node.js package for batch processing of files and directories, supporting rename, delete, move, and copy operations with infinite nesting support.
 
