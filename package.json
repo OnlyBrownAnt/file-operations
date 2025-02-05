@@ -1,6 +1,6 @@
 {
   "name": "fs-operations",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A package for batch file and directory operations",
   "main": "index.js",
   "scripts": {
