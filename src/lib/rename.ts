@@ -1,11 +1,11 @@
-const fs = require('fs').promises;
-const path = require('path');
-const { traverseDirectory } = require('./utils.js');
-const { logError } = require('../error.js');
+import * as path from 'path';
+import { promises as fs } from 'fs';
+import { traverseDirectory } from './utils.js';
+import { logError } from '../error.js';
 
-async function renameFiles(directory, pattern, newName) {
+export async function renameFiles(directory: string, pattern: any, newName: string) {
   try {
-    traverseDirectory(directory, async (itemPath, item) => {
+    traverseDirectory(directory, async (itemPath: string, item: any) => {
       const baseName = path.basename(itemPath);
       const newBaseName = baseName.replace(pattern, newName);
       if (baseName != newBaseName) {
@@ -17,8 +17,4 @@ async function renameFiles(directory, pattern, newName) {
   } catch (error) {
     logError('renameFiles', error);
   }
-}
-
-module.exports = {
-  renameFiles
 }

@@ -1,11 +1,11 @@
-const fs = require('fs').promises;
-const path = require('path');
-const { traverseDirectory } = require('./utils.js');
-const { logError } = require('../error.js');
+import * as path from 'path';
+import { promises as fs } from 'fs';
+import { traverseDirectory } from './utils.js';
+import { logError } from '../error.js';
 
-async function deleteFiles(directory, pattern) {
+export async function deleteFiles(directory: string, pattern: any) {
   try {
-    traverseDirectory(directory, async (itemPath, item) => {
+    traverseDirectory(directory, async (itemPath: string, item: any) => {
       const basename = path.basename(itemPath);
       if (pattern.test(basename)) {
         if (item.isDirectory()) {
@@ -20,8 +20,4 @@ async function deleteFiles(directory, pattern) {
   } catch (error) {
     logError('deleteFiles', error);
   }
-}
-
-module.exports = {
-  deleteFiles
 }

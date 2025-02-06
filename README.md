@@ -21,7 +21,7 @@ npm install fs-operations --save-dev
 ### Rename Files and Directories
 
 ```javascript
-const { renameFiles } = require("fs-operations");
+import { renameFiles } from "fs-operations";
 
 (async () => {
   await renameFiles("./test", /old/, "new"); // Replace "old" with "new" in filenames and directory names
@@ -31,7 +31,7 @@ const { renameFiles } = require("fs-operations");
 ### Delete Files and Directories
 
 ```javascript
-const { deleteFiles } = require("fs-operations");
+import { deleteFiles } from "fs-operations");
 
 (async () => {
   await deleteFiles("./test", /delete/); // Delete files and directories with names containing "delete"
@@ -41,7 +41,7 @@ const { deleteFiles } = require("fs-operations");
 ### Move Files and Directories
 
 ```javascript
-const { moveFiles } = require("fs-operations");
+import { moveFiles } from "fs-operations";
 
 (async () => {
   await moveFiles("./test/source", "./test/destination"); // Move a directory
@@ -51,7 +51,7 @@ const { moveFiles } = require("fs-operations");
 ### Copy Files and Directories
 
 ```javascript
-const { copyFiles } = require("fs-operations");
+import { copyFiles } from "fs-operations";
 
 (async () => {
   await copyFiles("./test/source", "./test/copy"); // Copy a directory

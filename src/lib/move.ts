@@ -1,7 +1,8 @@
-const fs = require('fs').promises;
-const { logError } = require('../error.js');
+import { promises as fs } from 'fs';
+import { logError } from '../error.js';
 
-async function moveFiles(source, destination) {
+
+export async function moveFiles(source: string, destination: string) {
   try {
     await fs.rename(source, destination);
     console.log(`Moved: ${source} -> ${destination}`);
@@ -9,5 +10,3 @@ async function moveFiles(source, destination) {
     logError('moveFiles', error);
   }
 }
-
-module.exports = { moveFiles };

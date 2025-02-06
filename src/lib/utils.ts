@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('fs').promises;
-const { logError } = require('../error.js');
+import * as path from 'path';
+import { promises as fs } from 'fs';
+import { logError } from '../error.js';
 
-async function traverseDirectory(directory, callback) {
+export async function traverseDirectory(directory: string, callback: Function): Promise<void> {
   try {
     const items = await fs.readdir(directory, { withFileTypes: true })
     for (const item of items) {
@@ -17,8 +17,4 @@ async function traverseDirectory(directory, callback) {
   } catch (error) {
     logError('traverseDirectory', error);
   }
-}
-
-module.exports = {
-  traverseDirectory
 }
